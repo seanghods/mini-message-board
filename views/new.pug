@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+    a(href="/") Back to Homepage
+    form(method='POST' action='/new')
+      label(for='author') Author:
+      input#author(type='text' name='author' required='')
+      label(for='message') Message:
+      input#message(type='text' name='message' required='')
+      button#submit(type='submit') Submit
+
+

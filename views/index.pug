@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  a(href="/new") Add a New Message
+  each message in messages
+    .message
+      .user User: #{message.user}
+      .text Text: #{message.text}
+      .date Date: #{message.added.toLocaleString()} 
